@@ -16,6 +16,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 3rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -24,12 +25,13 @@ header {
 span {
   font-size: 3rem;
   font-weight: 700;
-  color: #dea222;
+  color: #ff630b;
 }
 
 ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 3rem;
 }
 
@@ -41,19 +43,20 @@ a {
   padding: 0.5rem 1.5rem;
   border-radius: 100vmax;
   color: black;
+  transition: ease 0.6s all;
 }
 
 a.active {
-  background-color: #dea222;
+  background-color: #ff630b;
   color: #fff;
 }
 
 a:hover {
-  background-color: #dea222;
+  background-color: #ff630b;
   color: #fff;
 }
 
-header ul:hover  a:not(:hover) {
+header ul:hover a:not(:hover) {
   background-color: transparent;
   color: black;
 }
