@@ -32,8 +32,8 @@ span {
   color: #ff630b;
 }
 
-nav{
-  transition: all ease .5s;
+nav {
+  transition: all ease 0.5s;
 }
 
 ul {
@@ -83,6 +83,7 @@ label div {
   width: 100%;
   border-radius: 100vmax;
   position: absolute;
+  transition: all ease 0.3s;
 }
 
 label div:nth-child(1) {
@@ -91,6 +92,7 @@ label div:nth-child(1) {
 
 label div:nth-child(2) {
   top: 50%;
+  transform: scale(1);
 }
 
 label div:nth-child(3) {
@@ -98,7 +100,6 @@ label div:nth-child(3) {
 }
 
 @media only screen and (max-width: 48em) {
-
   header {
     position: relative;
   }
@@ -110,7 +111,7 @@ label div:nth-child(3) {
     left: 0;
     height: 0;
     overflow: hidden;
-    transition: all ease .5s;
+    transition: all ease 0.5s;
   }
 
   ul {
@@ -124,5 +125,17 @@ label div:nth-child(3) {
 
   input:checked + header nav {
     height: calc(100vh - 10rem);
+  }
+
+  input:checked + header label div:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  input:checked + header label div:nth-child(2) {
+    transform: scale(0);
+  }
+  input:checked + header label div:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
   }
 }
