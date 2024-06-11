@@ -13,6 +13,10 @@ body {
   font-family: sans-serif;
 }
 
+input {
+  display: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -26,6 +30,10 @@ span {
   font-size: 3rem;
   font-weight: 700;
   color: #ff630b;
+}
+
+nav{
+  transition: all ease .5s;
 }
 
 ul {
@@ -59,4 +67,62 @@ a:hover {
 header ul:hover a:not(:hover) {
   background-color: transparent;
   color: black;
+}
+
+label {
+  width: 5rem;
+  height: 3rem;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+label div {
+  background-color: #ff630b;
+  height: 5px;
+  width: 100%;
+  border-radius: 100vmax;
+  position: absolute;
+}
+
+label div:nth-child(1) {
+  top: 0%;
+}
+
+label div:nth-child(2) {
+  top: 50%;
+}
+
+label div:nth-child(3) {
+  top: 100%;
+}
+
+@media only screen and (max-width: 48em) {
+
+  header {
+    position: relative;
+  }
+
+  nav {
+    position: absolute;
+    width: 100%;
+    top: 10rem;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all ease .5s;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  label {
+    display: block;
+  }
+
+  input:checked + header nav {
+    height: calc(100vh - 10rem);
+  }
 }
